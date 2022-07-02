@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> User Info</title>
+</head>
+
+<body>
+    <script>
+        function readCookie(name) {
+            return (name = new RegExp('(?:^|;\\s*)' + ('' + name).replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&') + '=([^;]*)').exec(document.cookie)) && name[1];
+        }
+
+        credentials = readCookie("credentials");
+
+
+        if (!credentials) {
+            console.log("Non puoi accedere");
+            window.location.replace("http://localhost:8000/login_register/index.html")
+        }
+    </script>
+
+    <div id="info_container" class="content">
+
+        <div class="container-element-nome"> Nome:<span id="span_nome"> jk </span></div>
+        <div class="container-element-mail"> Mail: <span id="span_mail">  jk </span></div>
+        <div class="container-element-username"> Username: <span id="span_username"> jk</span></div>
+
+    </div>
+    <button href="/" onclick="getAllInfo()"> GET MORE INFO </button>
+
+    <script>
+        function readCookie(name) {
+            return (name = new RegExp('(?:^|;\\s*)' + ('' + name).replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&') + '=([^;]*)').exec(document.cookie)) && name[1];
+        }
+
+        credentials = readCookie("credentials").split("%%");
+
+        div = document.getElementById("info_container").querySelectorAll("span");
+
+        credentials.map((element, i) => {
+
+            div[i].innerHTML = atob(atob(element));
+
+        })
+    </script>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

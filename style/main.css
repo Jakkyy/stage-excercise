@@ -1,0 +1,67 @@
+:root {
+    --main: linear-gradient(90deg, rgba(34, 74, 156, 1) 8%, rgba(43, 96, 155, 1) 20%, rgba(47, 105, 154, 1) 37%, rgba(57, 131, 153, 1) 51%, rgba(60, 139, 153, 1) 63%, rgba(67, 154, 152, 1) 74%, rgba(72, 166, 151, 1) 86%, rgba(78, 182, 150, 1) 95%);
+}
+
+.logo {
+    display: initial;
+    background-image: url("../img/logo2.png");
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem;
+    box-sizing: content-box;
+    background-size: cover;
+    float: left;
+}
+
+.logo:hover {
+    display: block;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem;
+}
+
+.col-md-6 {
+    margin: 2px solid red;
+}
+
+body {
+    font-family: 'Open Sans'
+}
+
+#logo_index_img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#log_in_button {
+    background: rgb(34, 74, 156);
+    background: var(--main);
+    border-radius: 0;
+}
+
+.input-group-text {
+    border-radius: 0% !important;
+}
+
+#inputEmail:focus {
+    border-color: var(--main);
+}
+
+#register_redirection a:hover {
+    text-decoration-color: var(--main);
+    color: var(--main)
+}
+
+#log_out {
+    border: none;
+    background: none;
+    padding: 0;
+    margin-top: 8px;
+    margin-left: 0.7rem;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: var(--main) !important;
+}
